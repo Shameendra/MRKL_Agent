@@ -15,42 +15,42 @@ A sophisticated reasoning agent based on the **MRKL (Modular Reasoning, Knowledg
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        User Query                                │
+│                        User Query                               │
 │           "What's the weather in Tokyo and convert              │
-│            the temperature to Fahrenheit?"                       │
+│            the temperature to Fahrenheit?"                      │
 └─────────────────────────┬───────────────────────────────────────┘
                           │
                           ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Planning Phase (Optional)                     │
-│  1. Search for Tokyo weather                                     │
-│  2. Extract temperature value                                    │
+│                    Planning Phase (Optional)                    │
+│  1. Search for Tokyo weather                                    │
+│  2. Extract temperature value                                   │
 │  3. Convert Celsius to Fahrenheit using calculator              │
-│  4. Format final answer                                          │
+│  4. Format final answer                                         │
 └─────────────────────────┬───────────────────────────────────────┘
                           │
                           ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Reasoning Loop                                │
+│                    Reasoning Loop                               │
 │  ┌────────────────────────────────────────────────────────────┐ │
-│  │  Thought: I need to find the current weather in Tokyo     │ │
+│  │  Thought: I need to find the current weather in Tokyo      │ │
 │  │  Action: web_search                                        │ │
 │  │  Action Input: "Tokyo weather today"                       │ │
-│  │  Observation: Temperature: 22°C, Partly cloudy            │ │
+│  │  Observation: Temperature: 22°C, Partly cloudy             │ │
 │  └────────────────────────────────────────────────────────────┘ │
-│                          │                                       │
-│                          ▼                                       │
+│                          │                                      │
+│                          ▼                                      │
 │  ┌────────────────────────────────────────────────────────────┐ │
-│  │  Thought: Now I need to convert 22°C to Fahrenheit        │ │
+│  │  Thought: Now I need to convert 22°C to Fahrenheit         │ │
 │  │  Action: calculator                                        │ │
-│  │  Action Input: "22 * 9/5 + 32"                            │ │
+│  │  Action Input: "22 * 9/5 + 32"                             │ │
 │  │  Observation: Result: 71.6                                 │ │
 │  └────────────────────────────────────────────────────────────┘ │
-│                          │                                       │
-│                          ▼                                       │
+│                          │                                      │
+│                          ▼                                      │
 │  ┌────────────────────────────────────────────────────────────┐ │
-│  │  Thought: I have all the information needed               │ │
-│  │  Final Answer: Tokyo is currently 22°C (71.6°F)           │ │
+│  │  Thought: I have all the information needed                │ │
+│  │  Final Answer: Tokyo is currently 22°C (71.6°F)            │ │
 │  │               with partly cloudy conditions.               │ │
 │  └────────────────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────────────────┘
